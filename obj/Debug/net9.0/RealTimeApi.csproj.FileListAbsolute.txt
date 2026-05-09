@@ -32,3 +32,4 @@ D:\DOTNET-SAMPLES\Azure-GitHub-Deployment\DotNet_Api\RealTimeApi\obj\Debug\net9.
 D:\DOTNET-SAMPLES\Azure-GitHub-Deployment\DotNet_Api\RealTimeApi\obj\Debug\net9.0\RealTimeApi.genruntimeconfig.cache
 D:\DOTNET-SAMPLES\Azure-GitHub-Deployment\DotNet_Api\RealTimeApi\obj\Debug\net9.0\ref\RealTimeApi.dll
 D:\DOTNET-SAMPLES\Azure-GitHub-Deployment\DotNet_Api\RealTimeApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\DOTNET-SAMPLES\Azure-GitHub-Deployment\DotNet_Api\RealTimeApi\obj\Debug\net9.0\RealTimeApi.sourcelink.json

@@ -1,4 +1,4 @@
-name: Build and Deploy .NET Real-Time API to Azure!
+name: Build and Deploy .NET Real-Time API to Azure
 
 on:
   push:
