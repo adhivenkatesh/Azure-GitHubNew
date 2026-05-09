@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "SOQ6EG1a17Q=",
+  "success": true,
+  "projectFilePath": "D:\\DOTNET-SAMPLES\\Azure-GitHub-Deployment\\DotNet_Api\\RealTimeApi\\RealTimeApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.6\\microsoft.aspnetcore.openapi.9.0.6.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.openapi\\1.6.23\\microsoft.openapi.1.6.23.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\9.0.0\\swashbuckle.aspnetcore.swagger.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

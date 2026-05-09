@@ -1,0 +1,47 @@
+name: Build and Deploy .NET Real-Time API to Azure
+
+on:
+  push:
+    branches:
+      - main # Triggers the workflow on pushes to the main branch
+  workflow_dispatch: # Allows you to run the workflow manually
+
+env:
+  AZURE_WEBAPP_NAME: 'my-realtime-api-prod'    # Replace with your App name
+  WORKING_DIRECTORY: '.'                       # Folder with your .csproj
+  DOTNET_VERSION: '9.0.x'                      # Added .x to get the latest security patch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. Check out the code
+      - name: Checkout GitHub Action
+        uses: actions/checkout@v4
+        
+      # 2. Setup .NET environment
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+          
+      # 3. Restore dependencies
+      - name: Restore dependencies
+        run: dotnet restore ${{ env.WORKING_DIRECTORY }}
+        
+      # 4. Build the project
+      - name: Build project
+        run: dotnet build ${{ env.WORKING_DIRECTORY }} --configuration Release --no-restore
+        
+      # 5. Publish the project to a folder
+      - name: Publish project
+        run: dotnet publish ${{ env.WORKING_DIRECTORY }} --configuration Release --no-build --output ./publish
+
+      # 6. Deploy to Azure Web App (This was missing!)
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+          package: ./publish
