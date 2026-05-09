@@ -62,7 +62,7 @@ app.MapHub<NotificationHub>("/notificationsHub");
 // A standard REST endpoint just to verify the API is running
 app.MapGet("/api/health", () => Results.Ok(new { Status = "Healthy", Time = DateTime.UtcNow }));
 
-app.MapGet("/welcome", () => Results.Ok("Welcome and the application is working"));
+app.MapGet("/welcome", () => Results.Ok(new { Status = "Welcome and the application is working", Time = DateTime.UtcNow.ToLocalTime().ToString() }));
 
 app.Run();
 
